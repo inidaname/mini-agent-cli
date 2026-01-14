@@ -1,0 +1,40 @@
+{
+  "name": "mini-agent-cli",
+  "version": "1.0.0",
+  "description": "A minimal Node.js coding agent implementing the Open Agent Skills specification using Claude 3.5 Sonnet.",
+  "main": "src/cli.js",
+  "type": "module",
+  "bin": {
+    "mini-agent": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "claude",
+    "anthropic",
+    "cli",
+    "open-agent-skills",
+    "automation",
+    "node"
+  ],
+  "author": "Hassan <saniyhassan@gail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inidaname/mini-agent-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/inidaname/mini-agent-cli/issues"
+  },
+  "homepage": "https://github.com/inidaname/mini-agent-cli#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
