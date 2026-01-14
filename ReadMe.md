@@ -22,6 +22,8 @@ The project is modularized to separate concerns between skill management, LLM or
 ├── .skills/                  # Local skills directory
 │   └── changelog-generator/
 │       └── SKILL.md
+├── test/
+│   └── ...                   # Node built-in tests
 └── package.json
 ```
 
@@ -76,26 +78,6 @@ Covered areas:
 - Skill discovery
 - Skill parsing
 - Skill matching logic
-
----
-
-## Submission Notes
-
-### Time Spent
-
-Approximately **5 hours**.
-
-- 1 hour: Researching the Open Agent Skills spec and Langbase repository.
-- 1 hour: Building the filesystem discovery and Markdown parsing logic.
-- 1 hour: Writing tests.
-- 1.5 hours: Architecting the agent loop and handling Claude's tool-calling response structure.
-- 0.5 hours: Refactoring for modularity and testing.
-
-### Challenges
-
-- **Response Interpretation:** One interesting challenge was handling the transition between Claude's `text` output and `tool_use` output. Since a tool call doesn't contain a `text` field, I had to ensure the `interpret.js` logic was robust enough to extract tool parameters and present them clearly without returning `undefined`.
-- **Minimalist Matching:** I implemented a local keyword-matching strategy in `match.js`. While simple, it ensures that only relevant tools are injected into the system prompt, keeping the context window clean—a key requirement of the exercise.
-- **Markdown Parsing:** Ensuring that `SKILL.md` files from the community (which may vary slightly in formatting) could be parsed reliably for their name and description.
 
 ## Requirements
 
